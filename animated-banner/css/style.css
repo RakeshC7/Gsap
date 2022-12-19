@@ -1,0 +1,331 @@
+@charset "utf-8";
+
+/*** Fonts Face CSS ***/
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+    font-family: 'Canopee';
+    src: url('../fonts/Canopee-Regular.eot');
+    src: url('../fonts/Canopee-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Canopee-Regular.woff2') format('woff2'),
+        url('../fonts/Canopee-Regular.woff') format('woff'),
+        url('../fonts/Canopee-Regular.ttf') format('truetype'),
+        url('../fonts/Canopee-Regular.svg#Canopee-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kobe';
+    src: url('../fonts/Kobe11-Regular.eot');
+    src: url('../fonts/Kobe11-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kobe11-Regular.woff2') format('woff2'),
+        url('../fonts/Kobe11-Regular.woff') format('woff'),
+        url('../fonts/Kobe11-Regular.ttf') format('truetype'),
+        url('../fonts/Kobe11-Regular.svg#Kobe1.1-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/**** CSS Variables ****/
+
+/** use variables in css property like, background-color: var(--primary-color); */
+:root {
+    /* --- color variables --- */
+    --primary-color: #e3dcc7;
+    --secondary-color: #fff;
+    --border-color: #e8dede;
+    --text-primary-color: #292323;
+    --text-secondary-color: #ccc;
+    --text-selection-color: #b3d4fc;
+}
+
+/* -=- Common Element CSS Start -=- */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+::-moz-selection {
+    background: var(--text-selection-color);
+    text-shadow: none;
+}
+
+::selection {
+    background: var(--text-selection-color);
+    text-shadow: none;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--primary-color);
+}
+body{
+    overflow-x: hidden !important;
+}
+
+img {
+    border: 0px !important;
+    outline: none;
+    width: 100%;
+    max-width: 100%;
+}
+
+ul,
+ol {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:focus,
+.btn.focus,
+.form-control:hover,
+.form-control:focus,
+.form-control:focus:Active {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+p {
+    margin: 0px;
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--text-primary-color);
+    font-weight: normal;
+}
+
+hr {
+    margin: 1em 0;
+    padding: 0;
+    display: block;
+    border: 0;
+    border-top: 1px solid var(--border-color);
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--text-secondary-color);
+    opacity: 1;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--text-secondary-color);
+}
+
+input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--text-secondary-color);
+}
+
+textarea::placeholder {
+    color: var(--text-secondary-color);
+    opacity: 1;
+}
+
+textarea:-ms-input-placeholder {
+    color: var(--text-secondary-color);
+}
+
+textarea::-ms-input-placeholder {
+    color: var(--text-secondary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+p,
+a {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Common Class CSS related to text alignment*/
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* -=- Header CSS -=- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header .navbar {
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header .site-info {
+    font-size: 34px;
+    line-height: 40px;
+    font-family: "Kobe", Helvetica, sans-serif;
+    font-weight: 500;
+}
+header .site-menu {
+    display: flex;
+    align-items: center;
+}
+header .site-menu a{
+    text-transform: uppercase;
+    line-height: 20px;
+    color: #6d6458;
+    font-family: "Kobe", Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+/* -=- Main Area CSS -=- */
+.block_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid red; */
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.title {
+    margin-top: 20rem;
+    text-align: center;
+    font-family: "Canopee";
+    font-size: 6.62vw;
+    line-height: 120%;
+    color: #393833;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.title .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+/* -=- Keyframe CSS -=- */
+
+/****** Responsive CSS Start ******/
+
+@media (min-width: 350px){
+    header .navbar{
+        padding: 30px 10px;
+        align-items: center;
+    }
+    header .site-info{
+        font-size: 24px;
+        line-height: 26px;
+    }
+    header .site-menu .menu-item{
+        margin-right: 0px;
+    }
+    header .site-menu{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .title{
+        margin-top: 14rem;
+        font-size: 12vw;
+    }
+    .block_wrapper{
+        max-width: 280px;
+    }
+}
+@media (min-width: 768px){
+    header .navbar{
+        padding: 30px 40px;
+    }
+    header .site-info{
+        font-size: 34px;
+        line-height: 40px;
+    }
+    header .site-menu .menu-item {
+        margin-right: 60px;
+    }
+    header .site-menu{
+        flex-direction: row;
+        align-items: center;
+    }
+    .title{
+        margin-top: 20rem;
+        font-size: 6.62vw;
+    }
+    .block_wrapper{
+        max-width: 400px;
+    }
+}
+
+/****** Responsive CSS End ******/

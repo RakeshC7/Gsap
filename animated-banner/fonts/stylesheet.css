@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Canopee';
+    src: url('Canopee-Regular.eot');
+    src: url('Canopee-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Canopee-Regular.woff2') format('woff2'),
+        url('Canopee-Regular.woff') format('woff'),
+        url('Canopee-Regular.ttf') format('truetype'),
+        url('Canopee-Regular.svg#Canopee-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kobe1.1';
+    src: url('Kobe11-Regular.eot');
+    src: url('Kobe11-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Kobe11-Regular.woff2') format('woff2'),
+        url('Kobe11-Regular.woff') format('woff'),
+        url('Kobe11-Regular.ttf') format('truetype'),
+        url('Kobe11-Regular.svg#Kobe1.1-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
